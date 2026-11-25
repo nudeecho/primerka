@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; media-src blob:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<title>Примерка</title>
+<meta name="description" content="Личный инструмент для предпросмотра сетки. Не связан с Instagram.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Примерка">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e13" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<aside id="side">
+  <h1>Примерка</h1>
+  <button id="drop" type="button"><b>Перетащите сюда фото и видео</b><span>или нажмите, чтобы выбрать</span></button>
+  <section><h2>Где хранятся файлы</h2><p>Только на этом устройстве, в этом браузере. Перенос на iPhone и обратно: меню ☰ в рамке телефона.</p><p>Личный инструмент, не связан с Instagram.</p></section>
+</aside>
+<main id="phone">
+  <div id="status" aria-hidden="true"><b></b><span></span></div>
+  <div id="profile" class="screen"></div>
+  <nav id="tabbar" aria-hidden="true"></nav>
+  <div id="overlays"></div>
+  <div id="toast" role="status"></div>
+</main>
+<input id="file" type="file" accept="image/*,video/*" multiple hidden>
+<input id="hlfile" type="file" accept="image/*" hidden>
+<input id="avatarfile" type="file" accept="image/*" hidden>
+<input id="backupfile" type="file" accept=".zip,application/zip" hidden>
+<script src="store.js"></script>
+<script src="backup.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
